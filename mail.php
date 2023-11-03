@@ -3,7 +3,13 @@
 $name = $_POST["name"];
 $email = $_POST["email"];
 $subject = $_POST["subject"];
-// $message = $_POST["message"];
+$message = $_POST["message"];
+$phone = $_POST["phone"];
+$date = $_POST["date"];
+$time = $_POST["time"];
+$paymentMethod = $_POST["paymentMethod"];
+$direction = $_POST["direction"];
+$time = $_POST["time"];
 
 require "vendor/autoload.php";
 
