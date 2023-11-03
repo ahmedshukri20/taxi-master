@@ -9,7 +9,7 @@ $date = $_POST["date"];
 $time = $_POST["time"];
 $paymentMethod = $_POST["paymentMethod"];
 $direction = $_POST["direction"];
-$time = $_POST["time"];
+$passengers = $_POST["passengers"];
 
 require "vendor/autoload.php";
 
