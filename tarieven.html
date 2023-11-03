@@ -117,7 +117,6 @@
 									<th scope="col">PERSONEN</th>
 									<th scope="col">OPSTAPTARIEF</th>
 									<th scope="col">PER KM</th>
-									<th scope="col">PER MINUUT</th>
 								</tr>
 								</thead>
 								<tbody>
@@ -126,16 +125,19 @@
 									<th scope="row">Tot 4</th>
 									<td>€ 3,40</td>
 									<td>€ 2,60</td>
-									<td>€ 0,44</td>
 								</tr>
 								</tbody>
 							</table>
 						</div>
+						<br>
+						<p>
+							Als de chauffeur tijdens de rit moet wachten, bijvoorbeeld als een vergadering uitloopt, kan een wachttarief van toepassing zijn. Dit tarief is € 49,64 per uur en wordt voorafgaand aan de rit overeengekomen.
+						</p>
 					</div>
 				</section>
 
 				  <!-- Start services Area -->
-				  <section class="services-area pb-50 pt-50">
+				  <section class="services-area pb-50 pt-10">
 					<div class="container">
 					 
 					   <div class="row">
@@ -180,50 +182,102 @@
 						  </div>
 					   </div>
 					   <br>
+					</div>
+				 </section>
+				 <!-- End services Area -->
+
+				   <!-- Start booking area -->
+				   <section class="bookingform pb-50 pt-10" id="bookingform">
+					<div class="container ">
+					   <h1 class="heading text-capitalize text-center">Boek uw taxi</h1>
+						<br>
+					   <h5 class="heading mb-5 text-center" style="max-width: 70%;margin: 0 auto;">Let op: online reserveren dient minimaal 24 uur voor vertrek te worden gedaan.</h5>
 					   <div class="row">
-						  <div class="col-lg-4">
-							 <div class="card single-service">
-								<div class="card-body">
-								   <i class="fa fa-plane fa-3x" aria-hidden="true"></i>
-								   <a href="#">
-									  <h4>AIRPORTSERVICE</h4>
-								   </a>
-								   <p class="small-text">
-									U betaalt een vast bedrag voor een rit van of naar het vliegveld.  
-								   </p>
-								</div>
-							 </div>
+						  <div class="col-lg-6 about-right py-5">
+							 <h3>Boek Uw Taxi rit op uw manier</h3>
+							 <p>	Bij HTE Taxi geloven we in het gemakkelijk maken voor u om uw rit te boeken. 
+								Daarom bieden we meerdere boekingsopties aan die aan uw behoeften voldoen.
+							 </p>
+							 <br>		
+							 <h3>WhatsApp Boeking</h3>
+							 <p>
+								Wilt u liever via WhatsApp boeken? Geen probleem. Stuur ons gewoon een bericht op +31 618 52 10 05, 
+								en wij regelen de rest. <br>
+								<a href="https://web.whatsapp.com/" target="_blank" class="text-primary font-weight-bold"><i class="fa fa-whatsapp" aria-hidden="true"></i> +31 618 52 10 05</a>
+							 </p>
+							 <br>
+							 <h3>Telefonische Boeking</h3>
+							 <p>
+								Bel ons op +31 618 52 10 05 om uw rit te boeken. Ons vriendelijke klantenserviceteam staat klaar om u te helpen. <br>
+								<a href="tel:+310618521005" target="_blank" class="text-primary font-weight-bold"><i class="fa fa-phone" aria-hidden="true"></i> +31 618 52 10 05</a>
+							 </p>
 						  </div>
-						  <div class="col-lg-4">
-							 <div class="card single-service">
-								<div class="card-body">
-								   <i class="fa fa-phone-square fa-3x" aria-hidden="true"></i>
-								   <a href="#">
-									  <h4>NEEM CONTACT MET ONS OP</h4>
-								   </a>
-								   <p class="small-text">
-									Heeft u iets laten liggen in een taxi, wilt u iets vragen? Neem dan graag contact met ons op per mail of telefoon.
-								   </p>
-								</div>
-							 </div>
-						  </div>
-						  <div class="col-lg-4">
-							 <div class="card single-service">
-								<div class="card-body">
-								   <i class="fa fa-building fa-3x" aria-hidden="true"></i>
-								   <a href="#">
-									  <h4>Stadsvervoer</h4>
-								   </a>
-								   <p class="small-text">
-									  Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-								   </p>
-								</div>
+						  <div class="col-lg-6 book-appointment py-5 px-4">
+							 <div class="book-agileinfo-form">
+								<h2>Online Boeken</h2>
+								<form id="booking_form" data-form-type="identity">
+								   <div class="row main-agile-sectns">
+									  <div class="col-md-12 agileits-btm-spc form-text2">
+										 <input type="text" name="name" placeholder="Uw Naam" required="" data-form-type="name" data-kwimpalastatus="alive" data-kwimpalaid="1697649905997-0">
+									  </div>
+								   </div>
+								   <div class="row ">
+									  <div class="col-md-6 agileits-btm-spc form-text2">
+										 <input type="email" name="email" placeholder="Emailadres" required="" data-dashlane-rid="ee49d3df9435d73b" data-form-type="email" data-kwimpalastatus="alive" data-kwimpalaid="1697649905997-2">
+									  </div>
+									  <div class="col-md-6 agileits-btm-spc form-text2">
+										 <input type="text" name="phone" placeholder="Telefoonnummer" required="" data-dashlane-rid="70ceb9508df1f7b2" data-form-type="phone" data-kwimpalastatus="alive" data-kwimpalaid="1697649905997-1">
+									  </div>
+								   </div>
+								   <div class="clear"></div>
+								   <div class="row main-agile-sectns">
+									  <div class="col-md-6 agileits-btm-spc form-text2 dates-wrap">
+										 <input id="datepicker2" name="date" class="dates form-control"  placeholder="Datum" type="text">                        
+									  </div>
+									  <div class="col-md-6 agileits-btm-spc form-text2">
+										 <input type="text" name="time" class="timepicker"/>
+									  </div>
+								   </div>
+								   <div id="location2" class="row main-agile-sectns"></div>
+								   <div class="main-agile-sectns">
+									  <div class="agileits-btm-spc">
+										 <select id="passengers" name="passengers" class="frm-field required sect">
+											<option value="">No.of Passengers</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+										 </select>
+									  </div>
+									  <div class="agileits-btm-spc form-text2">
+										 <select id="direction" name="direction" class="frm-field required" data-dashlane-rid="6e726ee66c201556" data-form-type="other">
+											<option value="">Direction</option>
+											<option value="One Way">One Way</option>
+											<option value="Return">Return</option>
+										 </select>
+									  </div>
+									  <div class="agileits-btm-spc form-text2">
+										 <select  id="direction" name="paymentMethod" class="frm-field required" data-dashlane-rid="6e726ee66c201556" data-form-type="other">
+											<option value="">Betaalwijze</option>
+											<option value="Contant in taxi">Contant in taxi</option>
+											<option value="Pin in taxi">Pin in taxi</option>
+											<option value="Creditcard in taxi">Creditcard in taxi</option>
+										 </select>
+									  </div>
+								   </div>
+								   <input type="hidden" name="subject" value="booking form">
+								   <div class="col-lg-12">
+									  <div class="alert-msg" style="text-align: left;"></div>
+									  <button class="btn-boeking primary btn-dark col-xs-12 btn text-uppercase p-3 mb-3 bg-dark" style="float: right;">
+										 <h4 class="text-light">Versturen</h4></button>											
+								   </div>
+								</form>
 							 </div>
 						  </div>
 					   </div>
 					</div>
 				 </section>
-				 <!-- End services Area -->
+				 <!-- End booking area-->
 				 <br>
 			<!-- start footer Area -->		
 			<footer class="footer-area section-gap">

@@ -9,6 +9,8 @@ $time = $_POST["time"];
 $paymentMethod = $_POST["paymentMethod"];
 $direction = $_POST["direction"];
 $passengers = $_POST["passengers"];
+$txtLocation3 = $_POST["txtLocation3"];
+$txtLocation4 = $_POST["txtLocation4"];
 
 
 
@@ -36,8 +38,6 @@ $mail->addAddress("ramzalee3@gmail.com", "Dave");
 
 $mail->Subject = $subject;
 
-$mail->Body = $subject + "/n" + $name + "/n" + $date + "/n" + $direction + "/n" + $passengers + "/n" + $paymentMethod ;
+$mail->Body = $subject . "n/" . $name . "n/" . $date . " " . $direction . " " . $passengers . " " . $paymentMethod . $txtLocation3 . $txtLocation4;
 
 $mail->send();
-
-header("Location: index.html");
