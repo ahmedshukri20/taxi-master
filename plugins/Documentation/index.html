@@ -1,0 +1,208 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Taxi Fare Calculator</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box {
+		    margin-bottom: 25px;
+		}
+		
+		.box p {
+		    margin-bottom:10px;
+		}
+		
+		p {
+		    text-align: justify;
+		}
+		
+		li {
+		    margin-bottom: 7px;
+		    text-align: justify;
+		}
+		
+		h3 {
+		    margin-top: 18px;
+            margin-bottom: 12px;
+		}
+		
+		.innerList {
+		    list-style-type: lower-roman;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">Taxi Fare Calculator Documentation by Najmul Iqbal v1.1</h3>
+		
+		<hr />
+		
+		<h1 class="center">Taxi Fare Calculator</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 02/28/2020<br>
+					Updated: 08/20/2023<br>
+					By: Najmul Iqbal<br>
+					Email: <a href="mailto:iqbengsolution@gmail.com">iqbengsolution@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my script. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/najmuliqbal15">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr />
+		
+		<h2 id="top" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#overview">Overview</a></li>
+			<li><a href="#features">Features</a></li>
+            <li><a href="#howToUse">How To Use?</a></li>
+            <li><a href="#videoDemo">Video Demo</a></li>
+            <li><a href="#configureKey">Configure the API Key</a></li>
+            <li><a href="#addCountries">Enable More Countries</a></li>
+		</ol>
+		
+		<hr />
+		
+		<h3 id="overview"><strong>A) Overview</strong> - <a href="#top">Top</a></h3>
+		<p>
+            Taxi Fare Calculator is a JavaScript code that calculates taxi fare.
+            Autocomplete has been added so that to make address selection easy.
+            You can also click on a location on the map to get the address instead of typing via keyboard.
+            You can also optimize the path to minimize the travel time and save money.
+            It utilizes Google Places, Geocoding and Directions APIs.
+        </p>
+		
+		<hr />
+
+		<h3 id="features"><strong>B) Features</strong> - <a href="#top">Top</a></h3>
+        <ol>
+           <li>It calculates taxi fare.</li>
+           <li>It also optimizes path for multiple locations to minimize travel time and save money.</li>
+           <li>It uses the Google Maps Directions API to display directions on the map.</li>
+           <li>It adds marker on the map on click and uses GeoCoder to get address of that location.</li>
+           <li>It uses google maps autocomplete for searching a location.</li>
+           <li>It utilizes the places library.</li>
+           <li>It uses driving travel mode.</li>
+           <li>You can display directions with or without optimization as required.</li>
+           <li>It uses bootstrap responsive UI.</li>
+        </ol>
+
+		<hr />
+		
+		<h3 id="howToUse"><strong>C) How To Use?</strong> - <a href="#top">Top</a></h3>
+        <ol>
+            <li>
+                <h3>Add Locations:</h3>
+                <ul>
+                   <li>Enter location in the <strong>Location</strong> box.</li>
+                   <li>Click the <strong>Add Location</strong> button to add multiple locations.</li>
+                   <li>The first location should be the start location.</li>
+                   <li>The last location should be the destination location.</li>
+                   <li>
+                        You can also click on the map on your desired location to get address of that location.
+                        The address will be displayed in the <strong>Location</strong> text box. First click
+                        inside the location box and then click on the desired location on the map.
+                   </li>
+                </ul>
+            </li>
+            
+            <li>
+                <h3>Path Optimization:</h3>
+                Check <strong>Optimize Path</strong> check box if you want to optimize the path. If you want to visit multiple locations
+                and you don't know where to visit first, second and so on, then check this option to display the directions in the proper
+                order so that to minimize your travel time and hence save money.
+            </li>
+
+            <li>
+                <h3>Remove Location:</h3>
+                To remove a location, click the cross icon on the right side of the location box.
+            </li>
+
+            <li>
+                <h3>Calculate Fare:</h3>
+                Click the <strong>Calculate Fare</strong> button to calculate fare.
+                This will also display the directions on the map.
+                The fare break down will be displayed in a separate panel (below the locations).
+            </li>
+
+            <li>
+                <h3>Clearing Locations:</h3>
+                If you want to clear all locations then click the <strong>Reset</strong> button and click <strong>OK</strong>
+                from the confirmation dialog. The form will also be reset.
+            </li>
+
+            <li>
+                <h3>Get JSON:</h3>
+                If you want to get JSON of all the locations and fare break down, click <strong>Get JSON</strong> button.
+            </li>
+        </ol>
+		
+        <hr />
+		
+        <h3 id="videoDemo"><strong>D) Video Demo</strong> - <a href="#top">Top</a></h3>
+        <p>
+            Please click the play button below to view the video demo.
+        </p>
+        <iframe width="560" height="330" src="https://www.youtube.com/embed/ivv2SSc-QQU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <hr />
+
+        <h3 id="configureKey"><strong>E) Configure the API Key</strong> - <a href="#top">Top</a></h3>
+        <ol>
+            <li>Go to Google developer console.</li>
+            <li>Generate your Google API Key.</li>
+            <li>Open index.html page.</li>
+            <li>
+                Add your key in the following line (replace YOUR_API_KEY with your Google Maps API key).<br />
+                &lt;script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=YOUR_API_KEY"&gt;&lt;/script&gt;
+            </li>
+            <li>
+            	Please make sure to enable below APIs for your API key from the Google Console.
+            	<ul>
+            		<li>Maps JavaScript API</li>
+            		<li>Directions API</li>
+            		<li>Geocoding API</li>
+            		<li>Places API</li>
+            	</ul>
+            </li>
+        </ol>
+        
+        <hr />
+        
+        <h3 id="addCountries"><strong>F) Enable More Countries</strong> - <a href="#top">Top</a></h3>
+        Currently the taxi fare calculator has been set to operate in limited countries. But you can enable more countries easily. Please see the steps below.
+        <ol>
+            <li>Open the JavaScript file '&lt;root&gt;/scripts/googleMap.js'.</li>
+            <li>Find the JavaScript array 'fareList'.</li>
+            <li>Add the new country to the list by specifying the country name, currency, starting price as well as the price per KM.</li>
+            <li>Save the file.</li>
+        </ol>
+        
+        <hr />
+		
+		<p>Once again, thank you so much for purchasing this script.
+        As I said at the beginning, I'd be glad to help you if you have any questions relating to this script.
+        No guarantees, but I'll do my best to assist. If you have a more general question relating to the
+        apps on CodeCanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+		
+		<p class="append-bottom alt large"><strong>Najmul Iqbal</strong></p>
+		<p><a href="#top">Go To Table of Contents</a></p>
+		
+		<hr class="space" />
+	</div><!-- end div .container -->
+</body>
+</html>

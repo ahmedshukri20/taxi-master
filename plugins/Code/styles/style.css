@@ -1,0 +1,143 @@
+﻿
+.map {
+    width: 100%;
+    height: 590px;
+}
+
+.form-inline {
+    margin: 10px;
+}
+
+.location-box {
+    display: inline-block;
+    width: 100%;
+}
+
+.remove-icon {
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+@media(min-width: 768px) {
+    .location-form {
+        padding-right: 0px;
+    }
+
+    .google-map-wrap {
+        padding-left: 0px;
+    }
+
+    .panel-group {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+.panel-group .panel-heading .checkbox {
+    margin-top: 0px;
+}
+
+.fare-details-group .panel-body {
+    padding: 0px;
+}
+
+.fare-details-group .table {
+    margin-bottom: 0px;
+}
+
+.panel-group .panel-heading {
+    color: #337AB7;
+}
+
+.panel-group .btn {
+    margin-right: 6px;
+    margin-top: 6px;
+}
+
+.book-appointment{
+    box-sizing: border-box;
+    background: #ffc107;
+    border-radius: 8px;
+}
+
+.book-appointment h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #eee;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.book-appointment .form-text1 {
+    padding-right: 0px;
+}
+
+.agileits-btm-spc {
+    margin-bottom: 1em;
+}
+
+.book-agileinfo-form input[type="text"], .book-agileinfo-form input[type="email"], select#passengers, select#cab, select#direction, input#datepicker {
+    width: 100%;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    border-radius: 0.25rem;
+    padding: 10px 10px;
+    outline: none;
+    border: none;
+    border: 1px solid rgb(13 13 13 / 27%);
+    box-sizing: border-box;
+    min-height: 45px;
+}
+
+ .book-agileinfo-form input[type="reset"] {
+    text-transform: capitalize;
+    background: #ffc107;
+    color: #fff;
+    padding: 0.7em 0em;
+    border: none;
+    border: 2px solid #ffc107;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 1em;
+    width: 49.5%;
+    outline: none;
+    letter-spacing: 2px;
+    border-radius: 0.25rem;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    transition: .5s all;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.book-agileinfo-form input[type="submit"]{
+    text-transform: uppercase;
+    background-color: #222;
+    line-height: 42px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+}
+
+.book-agileinfo-form input[type="submit"]:hover {
+    background-color: #fff;
+    color: #222;
+}
