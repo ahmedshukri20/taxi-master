@@ -3,13 +3,14 @@
 $name = $_POST["name"];
 $email = $_POST["email"];
 $subject = $_POST["subject"];
-$message = $_POST["message"];
 $phone = $_POST["phone"];
 $date = $_POST["date"];
 $time = $_POST["time"];
 $paymentMethod = $_POST["paymentMethod"];
 $direction = $_POST["direction"];
 $passengers = $_POST["passengers"];
+
+
 
 require "vendor/autoload.php";
 
@@ -34,7 +35,8 @@ $mail->setFrom($email, $name);
 $mail->addAddress("ramzalee3@gmail.com", "Dave");
 
 $mail->Subject = $subject;
-$mail->Body = $subject;
+
+$mail->Body = $subject + "/n" + $name + "/n" + $date + "/n" + $direction + "/n" + $passengers + "/n" + $paymentMethod ;
 
 $mail->send();
 
