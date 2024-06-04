@@ -17,15 +17,15 @@ $mail = new PHPMailer(true);
 $mail->isSMTP();
 $mail->SMTPAuth = true;
 
-$mail->Host = "sandbox.smtp.mailtrap.io";
+$mail->Host = "send.one.com";
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-$mail->Port = 587;
+$mail->Port = 465;
 
-$mail->Username = "e4d73ba8039f5e";
-$mail->Password = "ac646757f491f6";
+$mail->Username = "info@citycrosstaxi.nl";
+$mail->Password = "Anfaal@07";
 
 $mail->setFrom($email, $name);
-$mail->addAddress("ramzalee3@gmail.com", "Dave");
+$mail->addAddress("info@citycrosstaxi.nl", "Dave");
 
 $mail->Subject = $subject;
 
