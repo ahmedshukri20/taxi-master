@@ -12,7 +12,7 @@
             e.preventDefault(); // prevent default form submit
 
             $.ajax({
-                url: '../contact.php', // form action url
+                url: '/contact.php', // form action url
                 type: 'POST', // form submit method get/post
                 dataType: 'html', // request type html/json/xml
                 data: contact_form.serialize(), // serialize form data
