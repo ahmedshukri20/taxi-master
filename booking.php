@@ -18,6 +18,7 @@ require "vendor/autoload.php";
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 $mail = new PHPMailer(true);
 
@@ -26,15 +27,18 @@ $mail = new PHPMailer(true);
 $mail->isSMTP();
 $mail->SMTPAuth = true;
 
-$mail->Host = "send.one.com";
+$mail->isSMTP();
+$mail->SMTPAuth = true;
+$mail->Host = "mailout.one.com";
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-$mail->Port = 465;
-
+$mail->Port = 587;
 $mail->Username = "info@citycrosstaxi.nl";
 $mail->Password = "Anfaal@07";
 
-$mail->setFrom($email, $name);
-$mail->addAddress("info@citycrosstaxi.nl", "Dave");
+// Recipients
+$mail->setFrom("info@citycrosstaxi.nl", "City Cross Taxi");
+$mail->addAddress("info@citycrosstaxi.nl", "Taxi Booking");
+$mail->addReplyTo($email, $name);
 
 $mail->Subject = $subject;
 

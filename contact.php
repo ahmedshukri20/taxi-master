@@ -9,26 +9,33 @@ require "vendor/autoload.php";
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 $mail = new PHPMailer(true);
 
-// $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+try {
+    // Server settings
+    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    $mail->isSMTP();
+    $mail->SMTPAuth = true;
+    $mail->Host = "mailout.one.com";
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+    $mail->Username = "info@citycrosstaxi.nl";
+    $mail->Password = "Anfaal@07";
 
-$mail->isSMTP();
-$mail->SMTPAuth = true;
+    // Recipients
+    $mail->setFrom("info@citycrosstaxi.nl", "City Cross Taxi");
+    $mail->addAddress("info@citycrosstaxi.nl", "Contact Us");
+    $mail->addReplyTo($email, $name);
 
-$mail->Host = "send.one.com";
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-$mail->Port = 465;
+    // Content
+    $mail->Subject = $subject;
+    $mail->Body = $subject . "\n" . $name . "\n" . $message . "\n" . $email;
 
-$mail->Username = "info@citycrosstaxi.nl";
-$mail->Password = "Anfaal@07";
-
-$mail->setFrom($email, $name);
-$mail->addAddress("info@citycrosstaxi.nl", "Dave");
-
-$mail->Subject = $subject;
-
-$mail->Body = $subject . "\n" . $name . "\n" . $message . "\n" . $email;
-
-$mail->send();
+    // Send the email
+    $mail->send();
+    echo "Message has been sent successfully";
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}

@@ -56,7 +56,6 @@
 
 .book-appointment{
     box-sizing: border-box;
-    background: #ffc107;
     border-radius: 8px;
 }
 
@@ -87,7 +86,7 @@
     padding: 10px 10px;
     outline: none;
     border: none;
-    border: 1px solid rgb(13 13 13 / 27%);
+    border: 1px solid rgb(13 13 13 / 53%);
     box-sizing: border-box;
     min-height: 45px;
 }

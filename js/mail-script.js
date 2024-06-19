@@ -1,4 +1,5 @@
     // -------   Mail Send ajax
+    
 
      $(document).ready(function() {
         var contact_form = $('#myForm'); // contact form
@@ -12,7 +13,7 @@
             e.preventDefault(); // prevent default form submit
 
             $.ajax({
-                url: 'contact.php', // form action url
+                url: '/contact.php', // form action url
                 type: 'POST', // form submit method get/post
                 dataType: 'html', // request type html/json/xml
                 data: contact_form.serialize(), // serialize form data
@@ -35,18 +36,18 @@
             e.preventDefault(); // prevent default form submit
 
             $.ajax({
-                url: 'booking.php', // form action url
+                url: '/booking.php', // form action url
                 type: 'POST', // form submit method get/post
                 dataType: 'html', // request type html/json/xml
                 data: booking_form.serialize(), // serialize form data
-                beforeSend: function() {
-                    alert.fadeOut();
-                    submit_booking.html('Sending....'); // change submit button text
+                beforeSend: function(data) {
+                    alert.html(data).fadeIn(); 
+                    alert.html('Sending....'); // change submit button text
                 },
                 success: function(data) {
-                    alert.html(data).fadeIn(); // fade in response data
+                    alert.html(data).show(); // fade in response data
+                    alert.html("Your details have been sent. We will conatct you") // fade in response data
                     booking_form.trigger('reset'); // reset form
-                    submit_booking.attr("style", "display: none !important");; // reset submit button text
                 },
                 error: function(e) {
                     console.log(e)
