@@ -1,5 +1,10 @@
 <?php
 
+if(!empty($_POST['hidden_field'])) {
+    // Detected a bot; exit or redirect
+    exit;
+}
+
 $name = $_POST["name"];
 $email = $_POST["email"];
 $subject = $_POST["subject"];
