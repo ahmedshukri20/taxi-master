@@ -5,15 +5,10 @@ if(!empty($_POST['hidden_field'])) {
     exit;
 }
 
-$name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
-$email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-$subject = filter_var($_POST["subject"], FILTER_SANITIZE_STRING);
-$message = filter_var($_POST["message"], FILTER_SANITIZE_STRING);
-
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    // Invalid email address; handle error
-    exit('Invalid email address.');
-}
+$name = $_POST["name"];
+$email = $_POST["email"];
+$subject = $_POST["subject"];
+$message = $_POST["message"];
 
 require "vendor/autoload.php";
 
