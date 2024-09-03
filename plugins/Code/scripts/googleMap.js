@@ -19,28 +19,23 @@ var countryFare = null;
 var fareList = {
     'France': {
         'currency': '€',
-        'startingPrice': 9,
-        'pricePerKm': 1.5,
+        'startingPrice': 3.40,
+        'pricePerKm': 3.50,
     },
     'Germany': {
-        'currency': '€',
-        'startingPrice': 9,
-        'pricePerKm': 1.5,
-    },
-    'United Kingdom': {
-        'currency': '£',
-        'startingPrice': 8,
-        'pricePerKm': 1.4,
+       'currency': '€',
+        'startingPrice': 3.40,
+        'pricePerKm': 2.80,
     },
     'Netherlands': {
         'currency': '€',
-        'startingPrice': 3.60,
+        'startingPrice': 3.40,
         'pricePerKm': 2.65,
     },
     'Belgium': {
         'currency': '€',
-        'startingPrice': 18,
-        'pricePerKm': 2.40,
+        'startingPrice': 3.40,
+        'pricePerKm': 2.65,
     }
 };
 
@@ -143,7 +138,7 @@ $(document).ready(function () {
         var valid = true;
         var countryError = false;
         var count = 0;
-        var country = null;
+        var country = $('#locations input[type="text"]').data("country");
         
         $('#locations input[type="text"]').each(function (index, locationBox) {
             count++;
@@ -171,6 +166,7 @@ $(document).ready(function () {
                 // location = $(locationBox).val();
                 location = $(locationBox).data('lat') + ' ' + $(locationBox).data('lng');
 
+                var country = null;
                 if ($(locationBox).data('country') != country) {
                     countryError = true;
                 }
@@ -191,20 +187,16 @@ $(document).ready(function () {
                 alert('Please add destination location.');
                 return;
             }
-
-            if (countryError) {
-                alert('Sorry, we don\'t provide cross border services.');
-                return;
-            }
         }
 
-        // Check whether the country is within the list
-        countryFare = fareList[country];
-        if (!countryFare) {
-            alert('Sorry, we provide services in below countries only.\n' +
-                'France\nGermany\nGreece\nUnited Kingdom\nCanada\nUnited States\nAustralia\n');
+       // Check whether the country is within the list
+        if (!(country in fareList)) {
+            alert('Sorry, we bieden alleen diensten aan in de volgende landen:\n' +
+                'France\nGermany\nUnited Kingdom\nNetherlands\nBelgium');
             return;
         }
+
+        var countryFare = fareList[country];
 
         // Create directions request.
         var directionsRequest = {
